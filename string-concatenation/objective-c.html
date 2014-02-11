@@ -2,5 +2,13 @@
 layout: default
 ---
 {% highlight objc %}
-[@"Foo" stringByAppendingString:[@" " stringByAppendingString:@"bar"]];
+[@"Foo" stringByAppendingString: @" bar"];
 {% endhighlight %}
+
+or
+
+{% highlight objc %}
+NSString *otherString = @"Bar";
+[@"Foo" stringByAppendingFormat: @" %@", otherString];
+{% endhighlight %}
+
