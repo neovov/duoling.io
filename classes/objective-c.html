@@ -4,12 +4,15 @@ layout: default
 {% highlight objc %}
 // Foo.h file
 @interface Foo : NSObject
-- (id)init;
+
+// using "instancetype" makes your life easier when it comes to subclassing
+// more about this keyword on http://nshipster.com/instancetype/
+- (instancetype)init;
 @end
 
 // Foo.m file
 @implementation Foo
-- (id)init
+- (instancetype)init
 {
 	// "Constructor"
 }
