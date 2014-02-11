@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% assign fragment = page.url | remove_first: "/" | remove: ".html" | split: "/" %}
+<h1>{{ fragment.first }} in:</h1>
+<ul>
+{% for language in site.languages %}
+	<li><a href="/{{ fragment.first }}/{{ language | downcase }}.html">{{ language }}</a></li>
+{% endfor %}
+</ul>

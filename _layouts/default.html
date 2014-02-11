@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>{{ site.name }}</title>
+
+	<link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+	<header id="header_wrap" class="outer">
+		<div class="inner">
+			<h1 id="project_title"><a href="/">{{ site.name }}</a></h1>
+			<a id="forkme_banner" href="{{ site.repo }}">Improve in GitHub</a>
+
+			<form id="form" action="/">
+			{% assign fragment = page.url | remove_first: "/" | remove: ".html" | split: "/" %}
+				<div>
+					<span>How to do</span>
+					<select id="what">
+						{% for what in site.what %}
+						{% assign w = what | downcase %}
+						<option value="{{ w }}"{% if fragment.first == w %}selected{% endif %}>{{ what }}</option>
+						{% endfor %}
+					</select>
+					<span>in</span>
+					<select id="language">
+						{% for language in site.languages %}
+						{% assign l = language | downcase %}
+						<option value="{{ l }}"{% if fragment.last == l %}selected{% endif %}>{{ language }}</option>
+						{% endfor %}
+					</select>
+					<button type="submit">☛</button>
+				</div>
+			</form>
+		</div>
+	</header>
+
+	<div id="main_content_wrap" class="outer">
+		<section id="main_content" class="inner">
+			{{ content }}
+		</section>
+	</div>
+
+	<footer id="footer_wrap" class="outer">
+		<div class="inner">
+			<p class="copyright">Maintained by <a href="https://github.com/neovov">Nicolas “Neovov” Le Gall</a></p>
+			<p>Powered by <a href="http://jekyllrb.com">Jekyll</a></p>
+		</div>
+	</footer>
+
+	<script src="/js/main.js"></script>
+</body>
+</html>
