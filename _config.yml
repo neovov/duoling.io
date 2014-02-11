@@ -2,4 +2,4 @@ name: Duoling.io
 repo: https://github.com/neovov/duoling.io
 pygments: true
 what: ["classes", "string-concatenation"]
-languages: ["JavaScript", "Java", "Ruby", "PHP", "Objective-C"]
+languages: ["JavaScript", "Java", "Ruby", "PHP", "Objective-C", "CoffeeScript"]
