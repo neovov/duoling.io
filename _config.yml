@@ -3,19 +3,29 @@ repo: https://github.com/neovov/duoling.io
 source: src
 
 what:
-  "start": ~
-  "compile": ~
-  "write debug message": ~
-  "comment": ~
-  "Basic": ["variable", "contant", "if / else if / else", "switch / case", "while / do while", "for", "for each", "break", "continue"]
-  "Types": ["boolean", "integer", "float", "string", "array", "RegExp", "null", "cast", "check type"]
-  "Logic": ["comparison", "ternary"]
-  "Functions": ["create a function", "anonymous function", "parameters", "return"]
-  "Classes": ["create a class", "constructor", "destructor", "variable", "contant", "method", "this", "public", "private", "protected", "static", "abstract", "final", "inherit", "overload", "super", "interface", "instanceof"]
-  "Order": ["namespace", "import / include"]
-  "Others": ["increment / decrement", "string concatenation"]
-  "Exceptions": ["throw", "try / catch / finally"]
-  "Ninja": ["free memory", "bitwise", "clone object", "serialize / unserialize"]
-  "Design patterns": ["singleton"]
+  - label: "start"
+  - label: "compile"
+  - label: "write debug message"
+  - label: "comment"
+  - label: "Basic"
+    options: ["variable", "contant", "if / else if / else", "switch / case", "while / do while", "for", "for each", "break", "continue"]
+  - label: "Types"
+    options: ["boolean", "integer", "float", "string", "array", "RegExp", "null", "cast", "check type"]
+  - label: "Logic"
+    options: ["comparison", "ternary"]
+  - label: "Functions"
+    options: ["create a function", "anonymous function", "parameters", "return"]
+  - label: "Classes"
+    options: ["create a class", "constructor", "destructor", "variable", "contant", "method", "this", "public", "private", "protected", "static", "abstract", "final", "inherit", "overload", "super", "interface", "instanceof"]
+  - label: "Order"
+    options: ["namespace", "import / include"]
+  - label: "Others"
+    options: ["increment / decrement", "string concatenation"]
+  - label: "Exceptions"
+    options: ["throw", "try / catch / finally"]
+  - label: "Ninja"
+    options: ["free memory", "bitwise", "clone object", "serialize / unserialize"]
+  - label: "Design patterns"
+    options: ["singleton"]
 
 lang: ["C", "C++", "C-Sharp", "Coffeescript", "Java", "JavaScript", "Objective-C", "PHP", "Python", "Ruby"]

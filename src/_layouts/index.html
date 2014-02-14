@@ -3,8 +3,8 @@ layout: default
 ---
 {% assign fragment = page.url | remove_first: "/" | remove: ".html" | split: "/" %}
 {% for what in site.what %}
-	{% assign key   = what[0] | downcase | replace: "/", "" | replace: " ", "-" %}
-	{% assign value = what[1] %}
+	{% assign key   = what.label | downcase | replace: "/", "" | replace: " ", "-" %}
+	{% assign value = what.options %}
 	{% if value %}
 		{% for what in value %}
 			{% assign key = what | downcase | replace: "/", "" | replace: " ", "-" | replace: "--", "-" %}

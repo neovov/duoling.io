@@ -19,9 +19,9 @@
 					<span>How to</span>
 					<select id="what">
 					{% for what in site.what %}
-						{% assign Key   = what[0] %}
-						{% assign key   = what[0] | downcase | replace: "/", "" | replace: " ", "-" | replace: "--", "-" %}
-						{% assign value = what[1] %}
+						{% assign Key   = what.label %}
+						{% assign key   = what.label | downcase | replace: "/", "" | replace: " ", "-" | replace: "--", "-" %}
+						{% assign value = what.options %}
 						{% if value %}
 							<optgroup label="{{ Key }}">
 							{% for what in value %}
