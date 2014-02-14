@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% assign fragment = page.url | remove_first: "/" | remove: ".html" | split: "/" %}
+{% for what in site.what %}
+	{% assign key   = what[0] | downcase | replace: "/", "" | replace: " ", "-" %}
+	{% assign value = what[1] %}
+	{% if value %}
+		{% for what in value %}
+			{% assign key = what | downcase | replace: "/", "" | replace: " ", "-" | replace: "--", "-" %}
+			{% if fragment.first == key %}
+				{% assign What = what %}
+			{% endif %}
+		{% endfor %}
+	{% else %}
+		{% if fragment.first == key %}
+			{% assign What = what %}
+		{% endif %}
+	{% endif %}
+{% endfor %}
+
+<h1>{{ What }} in:</h1>
+<ul>
+{% for lang in site.lang %}
+	<li><a href="/{{ fragment.first }}/{{ lang | downcase }}.html">{{ lang }}</a></li>
+{% endfor %}
+</ul>

@@ -1,5 +1,21 @@
 name: Duoling.io
 repo: https://github.com/neovov/duoling.io
-pygments: true
-what: ["classes", "string-concatenation"]
-languages: ["JavaScript", "Java", "Ruby", "PHP", "Objective-C", "CoffeeScript"]
+source: src
+
+what:
+  "start": ~
+  "compile": ~
+  "write debug message": ~
+  "comment": ~
+  "Basic": ["variable", "contant", "if / else if / else", "switch / case", "while / do while", "for", "for each", "break", "continue"]
+  "Types": ["boolean", "integer", "float", "string", "array", "RegExp", "null", "cast", "check type"]
+  "Logic": ["comparison", "ternary"]
+  "Functions": ["create a function", "anonymous function", "parameters", "return"]
+  "Classes": ["create a class", "constructor", "destructor", "variable", "contant", "method", "this", "public", "private", "protected", "static", "abstract", "final", "inherit", "overload", "super", "interface", "instanceof"]
+  "Order": ["namespace", "import / include"]
+  "Others": ["increment / decrement", "string concatenation"]
+  "Exceptions": ["throw", "try / catch / finally"]
+  "Ninja": ["free memory", "bitwise", "clone object", "serialize / unserialize"]
+  "Design patterns": ["singleton"]
+
+lang: ["C", "C++", "C-Sharp", "Coffeescript", "Java", "JavaScript", "Objective-C", "PHP", "Python", "Ruby"]

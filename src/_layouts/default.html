@@ -13,21 +13,32 @@
 			<h1 id="project_title"><a href="/">{{ site.name }}</a></h1>
 			<a id="forkme_banner" href="{{ site.repo }}">Improve in GitHub</a>
 
-			<form id="form" action="/">
 			{% assign fragment = page.url | remove_first: "/" | remove: ".html" | split: "/" %}
+			<form id="form" action="/">
 				<div>
-					<span>How to do</span>
+					<span>How to</span>
 					<select id="what">
-						{% for what in site.what %}
-						{% assign w = what | downcase %}
-						<option value="{{ w }}"{% if fragment.first == w %}selected{% endif %}>{{ what }}</option>
-						{% endfor %}
+					{% for what in site.what %}
+						{% assign Key   = what[0] %}
+						{% assign key   = what[0] | downcase | replace: "/", "" | replace: " ", "-" | replace: "--", "-" %}
+						{% assign value = what[1] %}
+						{% if value %}
+							<optgroup label="{{ Key }}">
+							{% for what in value %}
+								{% assign key = what | downcase | replace: "/", "" | replace: " ", "-" | replace: "--", "-" %}
+								<option value="{{ key }}"{% if fragment.first == key %}selected{% endif %}>{{ what }}</option>
+							{% endfor %}
+							</optgroup>
+						{% else %}
+							<option value="{{ key }}"{% if fragment.first == key %}selected{% endif %}>{{ Key }}</option>
+						{% endif %}
+					{% endfor %}
 					</select>
 					<span>in</span>
 					<select id="language">
-						{% for language in site.languages %}
-						{% assign l = language | downcase %}
-						<option value="{{ l }}"{% if fragment.last == l %}selected{% endif %}>{{ language }}</option>
+						{% for Lang in site.lang %}
+						{% assign lang = Lang | downcase %}
+						<option value="{{ lang }}"{% if fragment.last == lang %}selected{% endif %}>{{ Lang }}</option>
 						{% endfor %}
 					</select>
 					<button type="submit">☛</button>
