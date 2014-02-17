@@ -20,5 +20,4 @@ if ! gem list jekyll -i > /dev/null 2>&1; then
 	fi
 fi
 
-echo "Use CTRL + C to stop."
 jekyll serve --watch
