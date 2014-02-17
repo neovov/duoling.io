@@ -36,6 +36,13 @@ So, don't bother writing tons of text. Write the **essential** to be **efficient
 Don't write outdated code, promote **best practice**.
 
 The files are written in HTML so you can use any tag you want.
+The only prerequisite is to have a metadata header (used by the website builder):
+
+```
+---
+layout: default
+---
+```
 
 To write a block of highlighted code:
 
