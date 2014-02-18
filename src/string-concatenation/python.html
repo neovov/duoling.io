@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% highlight python %}
+"Foo" + " " + "bar"
+
+# or through %s
+'%s %s' % ('Foo', 'bar')
+
+# or through str.format()
+'{} {}'.format('Foo', 'bar')
+
+# also can have a position
+'{2} {1}'.format('bar', 'Foo')
+
+# or a name
+'{strfoo} {strbar}'.format(strfoo='Foo', strbar="bar")
+{% endhighlight %}
